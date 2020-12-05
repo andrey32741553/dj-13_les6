@@ -13,4 +13,4 @@ class MeasurementSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Measurement
-        fields = ('value', 'project')
+        fields = ('value', 'project', 'image')

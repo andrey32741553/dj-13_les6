@@ -1,13 +1,6 @@
 from django.db import models
 
 
-class Project(models.Model):
-
-    name = models.TextField()
-    latitude = models.FloatField()
-    longitude = models.FloatField()
-
-
 class TimestampFields(models.Model):
 
     class Meta:
@@ -19,6 +12,13 @@ class TimestampFields(models.Model):
     updated_at = models.DateTimeField(
         auto_now=True
     )
+
+
+class Project(TimestampFields):
+
+    name = models.TextField()
+    latitude = models.FloatField()
+    longitude = models.FloatField()
 
 
 class Measurement(TimestampFields):
