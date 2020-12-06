@@ -14,7 +14,7 @@ class TimestampFields(models.Model):
     )
 
 
-class Project(models.Model):
+class Project(TimestampFields):
 
     name = models.TextField()
     latitude = models.FloatField()
