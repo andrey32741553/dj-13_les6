@@ -7,10 +7,11 @@ class ProjectSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Project
+        fields = ('name', 'latitude', 'longitude')
 
 
 class MeasurementSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Measurement
-        fields = ('value', 'project', 'image')
+        fields = '__all__'

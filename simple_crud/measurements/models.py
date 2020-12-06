@@ -14,12 +14,14 @@ class TimestampFields(models.Model):
     )
 
 
-class Project(TimestampFields):
+class Project(models.Model):
 
     name = models.TextField()
     latitude = models.FloatField()
     longitude = models.FloatField()
 
+    def __str__(self):
+        return self.name
 
 class Measurement(TimestampFields):
 
